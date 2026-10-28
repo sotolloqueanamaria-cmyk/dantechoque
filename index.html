@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante Choque Castro - Taxi Local Alto La Barranca & Valle de Majes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#DC2626', 
+                            redDark: '#991B1B',
+                            dark: '#0F172A',
+                            accent: '#EF4444',
+                            bgLight: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(153, 27, 27, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- BARRA SUPERIOR DE INFORMACIÓN -->
+    <div class="bg-brand-dark text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1.5 font-medium text-slate-200">
+                    <i class="fa-solid fa-location-dot text-brand-red"></i> Base: Alto La Barranca (Aplao - Valle de Majes)
+                </span>
+                <span class="hidden md:flex items-center gap-1.5 text-amber-400 font-semibold">
+                    <i class="fa-solid fa-shield-halved"></i> Tarifa Fija y Justa • Sin Regateo
+                </span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="text-slate-400 font-medium">Métodos de pago:</span>
+                <span class="bg-emerald-900/80 text-emerald-300 px-2.5 py-0.5 rounded-full text-xs font-bold border border-emerald-500/40 flex items-center gap-1">
+                    <i class="fa-solid fa-mobile-screen-button"></i> Solo Yape
+                </span>
+                <span class="bg-amber-900/80 text-amber-300 px-2.5 py-0.5 rounded-full text-xs font-bold border border-amber-500/40 flex items-center gap-1">
+                    <i class="fa-solid fa-money-bill-wave"></i> Efectivo
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BANNER PRECIOS FIJOS -->
+    <div class="bg-slate-900 text-slate-100 font-bold py-2.5 px-4 text-center border-b border-red-900/50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm">
+            <span class="bg-brand-red text-white px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider font-extrabold flex items-center gap-1">
+                <i class="fa-solid fa-tag"></i> Tarifas Fijas
+            </span>
+            <span>🚘 Servicio de Taxi Transparente: <strong>Precios establecidos sin sorpresas ni regateo</strong> en todo el Valle de Majes.</span>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo profesional -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-brand-red rounded-xl flex items-center justify-center text-white font-extrabold text-2xl shadow-lg shadow-brand-red/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-taxi"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-extrabold tracking-tight block leading-none text-white">DANTE CHOQUE CASTRO</span>
+                        <span class="text-[11px] text-red-400 font-semibold tracking-wider uppercase block">Taxi Local • Alto La Barranca y Majes</span>
+                    </div>
+                </a>
+
+                <!-- Navegación Escritorio -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#inicio" class="hover:text-brand-red transition-colors">Inicio</a>
+                    <a href="#cotizar" class="hover:text-brand-red transition-colors">Consultar Tarifa</a>
+                    <a href="#destinos" class="hover:text-brand-red transition-colors">Destinos en el Valle</a>
+                    <a href="#auto" class="hover:text-brand-red transition-colors">Kia Picanto Rojo</a>
+                    <a href="#servicios" class="hover:text-brand-red transition-colors">Servicios</a>
+                    <a href="#faq" class="hover:text-brand-red transition-colors">Preguntas</a>
+                </nav>
+
+                <!-- Botones Acción Directa -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="tel:993246533" class="border border-slate-700 hover:border-brand-red text-slate-200 hover:text-brand-red px-4 py-2 rounded-xl text-sm font-semibold transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-red"></i> 993 246 533
+                    </a>
+                    <a href="https://wa.me/51993246533?text=Hola%20Dante,%20necesito%20un%20taxi%20en%20el%20Valle%20de%20Majes" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-green-600/30 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Pedir Taxi
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Inicio</a>
+            <a href="#cotizar" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Consultar Tarifa Fija</a>
+            <a href="#destinos" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Cobertura Local</a>
+            <a href="#auto" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Vehículo Kia Picanto Rojo</a>
+            <a href="#servicios" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Servicios y Mandados</a>
+            <a href="#faq" class="block py-2 text-slate-200 hover:text-brand-red font-medium">Preguntas Frecuentes</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <a href="tel:993246533" class="w-full text-center border border-slate-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-red"></i> Llamar Directo: 993 246 533
+                </a>
+                <a href="https://wa.me/51993246533?text=Hola%20Dante,%20necesito%20un%20servicio%20de%20taxi%20local" target="_blank" class="w-full text-center bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <section id="inicio" class="hero-bg py-10 md:py-16 px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Presentación Profesional -->
+            <div class="lg:col-span-6 text-white space-y-5 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-red-950/80 border border-red-500/50 px-3.5 py-1.5 rounded-full text-red-300 font-semibold text-xs sm:text-sm">
+                    <i class="fa-solid fa-car text-brand-red"></i> Taxi Particular en Alto La Barranca y Valle de Majes
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                    Tu transporte <span class="text-red-500">seguro, rápido y con tarifa fija</span> en el valle
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Servicio de taxi conducido por <strong>Dante Choque Castro</strong> en un moderno y cómodo <strong>Kia Picanto Rojo</strong>. Desplazamientos directos en <strong>Alto La Barranca</strong>, Aplao, Huancarqui, Querulpa, Corire, Lucco, Caspani, Cosos y anexos.
+                </p>
+
+                <!-- POLÍTICA DE TARIFAS FIJAS & COBERTURA -->
+                <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-2xl text-left text-xs sm:text-sm text-slate-300 space-y-2">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold">
+                        <i class="fa-solid fa-circle-check text-base"></i> Precios Fijos y Transparentes (Sin Regateo)
+                    </div>
+                    <p class="text-slate-400 text-xs">
+                        Tarifas establecidas previamente antes de abordar para tu tranquilidad. <u>Servicio exclusivamente local dentro del Valle de Majes (No se realizan viajes a Arequipa)</u>.
+                    </p>
+                </div>
+
+                <!-- Botones Móviles Rápidos -->
+                <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                    <a href="https://wa.me/51993246533?text=Hola%20Dante,%20estoy%20en%20Alto%20La%20Barranca%20y%20necesito%20un%20taxi" target="_blank" class="bg-green-600 hover:bg-green-500 text-white py-3.5 px-6 rounded-2xl font-bold shadow-xl shadow-green-600/30 flex items-center justify-center gap-2 text-base transition-transform active:scale-95">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Pedir Taxi por WhatsApp
+                    </a>
+                    <a href="tel:993246533" class="bg-slate-900 hover:bg-slate-800 text-slate-100 border border-slate-700 py-3.5 px-6 rounded-2xl font-semibold flex items-center justify-center gap-2 text-base">
+                        <i class="fa-solid fa-phone text-brand-red"></i> Llamar al 993 246 533
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cotizador Rápido Local (Sin descuentos, Precios Fijos) -->
+            <div id="cotizar" class="lg:col-span-6">
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/40 text-slate-800">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Tarifador Local Fijo</h2>
+                            <p class="text-xs sm:text-sm text-slate-500">Consulta la tarifa justa exacta según el trayecto</p>
+                        </div>
+                        <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 border border-red-200">
+                            <i class="fa-solid fa-lock text-brand-red"></i> Precio Fijo
+                        </span>
+                    </div>
+
+                    <form id="booking-form" onsubmit="event.preventDefault(); sendWhatsAppBooking();" class="space-y-4">
+                        <!-- Origen -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Punto de Recojo (Origen)</label>
+                            <select id="origin-select" onchange="calculateEstimate()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-red">
+                                <option value="Alto La Barranca">Alto La Barranca (Base)</option>
+                                <option value="Aplao Centro / Plaza / Mercado">Aplao Centro / Mercado / Hospital</option>
+                                <option value="Huancarqui">Huancarqui</option>
+                                <option value="Querulpa">Querulpa (Parque Jurásico)</option>
+                                <option value="Lucco / Caspani / Cosos">Lucco / Caspani / Cosos</option>
+                                <option value="La Punta / El Cura">La Punta / El Cura</option>
+                                <option value="Corire">Corire</option>
+                                <option value="otro">Otro punto en el Valle de Majes</option>
+                            </select>
+                        </div>
+
+                        <!-- Destino -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Punto de Llegada (Destino)</label>
+                            <select id="destination-select" onchange="calculateEstimate()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-red">
+                                <option value="Aplao Centro / Plaza / Mercado">Aplao Centro / Mercado / Hospital</option>
+                                <option value="Alto La Barranca">Alto La Barranca</option>
+                                <option value="Huancarqui">Huancarqui</option>
+                                <option value="Querulpa">Querulpa</option>
+                                <option value="Lucco / Caspani / Cosos">Lucco / Caspani / Cosos</option>
+                                <option value="La Punta / El Cura">La Punta / El Cura</option>
+                                <option value="Corire">Corire</option>
+                                <option value="otro">Otro sector o campo cercano</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo si elige "otro" -->
+                        <div id="custom-location-div" class="hidden">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Escribe la dirección exacta o referencia</label>
+                            <input type="text" id="custom-location" placeholder="Ej. Chacra en El Cura, Colegio de Huancarqui, etc." class="w-full py-2 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none">
+                        </div>
+
+                        <!-- Tipo de Servicio -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Tipo de Servicio</label>
+                            <select id="service-type" onchange="calculateEstimate()" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-red">
+                                <option value="carrera">Carrera Directa / Traslado de Pasajeros</option>
+                                <option value="encomienda">Mandado / Encomienda Rápida / Compras</option>
+                                <option value="salud_colegio">Traslado a Centro de Salud, Mercado o Colegio</option>
+                                <option value="por_hora">Taxi por Horas / Disposición Local</option>
+                            </select>
+                        </div>
+
+                        <!-- Método de Pago Seleccionado -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Forma de Pago Aceptada</label>
+                            <select id="payment-method" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-red">
+                                <option value="Yape">📱 Yape (Pago al instante)</option>
+                                <option value="Efectivo">💵 Pago en Efectivo</option>
+                            </select>
+                        </div>
+
+                        <!-- Detalle extra -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Referencia o Nota Adicional (Opcional)</label>
+                            <input type="text" id="notes" placeholder="Ej. Llevo paquetes / Número de pasajeros" class="w-full py-2 px-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none">
+                        </div>
+
+                        <!-- Panel de Tarifa Fija -->
+                        <div class="bg-slate-900 text-white rounded-2xl p-4 flex items-center justify-between border border-slate-800 shadow-inner">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Tarifa Fija Calculada</span>
+                                <span class="text-[11px] text-amber-400 font-semibold" id="estimate-note">Precio cerrado sin alteración</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xl sm:text-2xl font-extrabold text-brand-red" id="estimated-price">S/ 6.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Botón Enviar WhatsApp -->
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-green-600/30 transition-all flex items-center justify-center gap-2 text-sm sm:text-base active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar Carrera a Dante por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MUESTRA DEL VEHÍCULO REAL (KIA PICANTO ROJO) -->
+    <section id="auto" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Foto Real de Referencia -->
+            <div class="lg:col-span-6 relative">
+                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-900 flex items-center justify-center p-2">
+                    <img src="https://m.media-amazon.com/images/I/61I2aC7W0FL._AC_SL1200_.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1000&auto=format&fit=crop';"
+                         alt="Kia Picanto Rojo - Taxi Dante Choque Castro" 
+                         class="w-full h-auto max-h-80 object-contain rounded-2xl">
+                </div>
+                <div class="absolute bottom-4 left-4 right-4 bg-slate-950/90 text-white p-3.5 rounded-2xl backdrop-blur-md border border-slate-800 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-car-side text-brand-red text-2xl"></i>
+                        <div>
+                            <span class="block text-xs font-bold text-white">Kia Picanto Rojo</span>
+                            <span class="text-[10px] text-slate-300">Vehículo Compacto, Ágil y Cómodo</span>
+                        </div>
+                    </div>
+                    <span class="bg-red-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">Impecable</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-5">
+                <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                    <i class="fa-solid fa-shield text-brand-red"></i> Vehículo Seguro y Cuidado
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">
+                    Trasládate con comodidad en nuestro <span class="text-brand-red">Kia Picanto Rojo</span>
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Un vehículo moderno, ágil y de tamaño compacto perfecto para desplazarse con rapidez por las calles de Alto La Barranca, Aplao centro y todos los sectores del Valle de Majes.
+                </p>
+
+                <!-- Ventajas del Auto -->
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 bg-red-100 text-brand-red rounded-xl flex items-center justify-center flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900">Aire Acondicionado</h4>
+                            <p class="text-[11px] text-slate-500">Agradable y fresco para el calor del valle.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 bg-red-100 text-brand-red rounded-xl flex items-center justify-center flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900">Aseo y Sanitización</h4>
+                            <p class="text-[11px] text-slate-500">Unidad siempre limpia y desinfectada.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 bg-red-100 text-brand-red rounded-xl flex items-center justify-center flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900">Tarifas Transparentes</h4>
+                            <p class="text-[11px] text-slate-500">Precios fijos establecidos por zona.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 bg-red-100 text-brand-red rounded-xl flex items-center justify-center flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900">Conductor Confiable</h4>
+                            <p class="text-[11px] text-slate-500">Dante Choque Castro (Cel: 993 246 533).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DESTINOS Y COBERTURA EN EL VALLE -->
+    <section id="destinos" class="py-14 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                    <i class="fa-solid fa-map-location-dot text-brand-red"></i> Cobertura Local
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                    Rutas y Sectores Atendidos en el Valle de Majes
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                    Conexión directa entre poblados, anexos y centros de servicio con tarifas fijas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-red-100 text-brand-red rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-house-flag"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">Alto La Barranca</h3>
+                    <p class="text-[10px] text-slate-500">Punto de Base y Salidas Rápidas</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-slate-200 text-slate-800 rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">Aplao Centro</h3>
+                    <p class="text-[10px] text-slate-500">Plaza, Mercado, Hospital, Bancos</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">Huancarqui</h3>
+                    <p class="text-[10px] text-slate-500">Pueblo, Colegios y Chacras</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-700 rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">Querulpa</h3>
+                    <p class="text-[10px] text-slate-500">Parque Jurásico y Anexos</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-700 rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-map-pin"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">Lucco / Caspani / Cosos</h3>
+                    <p class="text-[10px] text-slate-500">Sectores y anexos del valle</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-brand-red transition-all">
+                    <div class="w-10 h-10 bg-orange-100 text-orange-700 rounded-xl mx-auto flex items-center justify-center text-lg mb-2 font-bold">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-900">La Punta / El Cura / Corire</h3>
+                    <p class="text-[10px] text-slate-500">Viviendas y Zonas Agrícolas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS OFRECIDOS -->
+    <section id="servicios" class="py-16 bg-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-xs font-extrabold text-brand-red uppercase tracking-widest mb-2">Atención Confiable</h2>
+                <p class="text-2xl sm:text-3xl font-bold text-slate-900">Servicios locales para los vecinos del Valle</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200/80 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Carreras Locales</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Traslados directos de puerta a puerta en Alto La Barranca, Aplao centro, Mercado, Bancos y plazas.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200/80 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Encomiendas y Mandados</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Envío o recojo rápido de paquetes, medicinas, encargos o compras del mercado dentro del Valle.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200/80 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Citas Médicas y Trámites</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Traslado tranquilo hacia el Centro de Salud u oficinas de Aplao con total paciencia y puntualidad.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200/80 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Coordinación por Llamada/WhatsApp</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Separa tu carrera con antelación llamando o escribiendo directamente al número 993 246 533.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO -->
+    <section class="py-14 bg-slate-950 text-white px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto text-3xl font-extrabold shadow-lg shadow-brand-red/30">
+                <i class="fa-solid fa-phone-flip"></i>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold">¿Necesitas un taxi en este momento?</h2>
+            <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light">
+                Comunícate con <strong>Dante Choque Castro</strong> para coordinar tu viaje en Alto La Barranca y zonas del Valle de Majes.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                <a href="tel:993246533" class="bg-brand-red hover:bg-red-700 text-white font-extrabold px-8 py-4 rounded-2xl text-base shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Llamar al 993 246 533
+                </a>
+                <a href="https://wa.me/51993246533?text=Hola%20Dante,%20necesito%20un%20servicio%20de%20taxi%20local" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-extrabold px-8 py-4 rounded-2xl text-base shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Escribir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section id="faq" class="py-16 bg-white px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div class="text-center mb-8">
+            <h2 class="text-xs font-extrabold text-brand-red uppercase tracking-widest mb-1">Información Transparente</h2>
+            <p class="text-2xl font-bold text-slate-900">Preguntas Frecuentes</p>
+        </div>
+
+        <div class="space-y-3">
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 text-sm font-semibold text-slate-900 flex justify-between items-center gap-4">
+                    <span>¿Cuáles son los métodos de pago aceptados?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                </button>
+                <div class="hidden p-4 pt-0 text-xs text-slate-600 border-t border-slate-200/60 bg-white">
+                    Aceptamos exclusivamente <strong>Yape</strong> (escaneando el código QR o por número) y <strong>Pago en Efectivo</strong>. No se utiliza Plin ni tarjetas de crédito.
+                </div>
+            </div>
+
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 text-sm font-semibold text-slate-900 flex justify-between items-center gap-4">
+                    <span>¿Los precios son negociables o se puede regatear?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                </button>
+                <div class="hidden p-4 pt-0 text-xs text-slate-600 border-t border-slate-200/60 bg-white">
+                    <strong>No. Las tarifas son fijas y no negociables.</strong> Esto garantiza un cobro justo, transparente y equitativo para ambas partes sin sorpresas ni incomodidades al finalizar el trayecto.
+                </div>
+            </div>
+
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 text-sm font-semibold text-slate-900 flex justify-between items-center gap-4">
+                    <span>¿Realiza viajes fuera del Valle de Majes o a Arequipa?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                </button>
+                <div class="hidden p-4 pt-0 text-xs text-slate-600 border-t border-slate-200/60 bg-white">
+                    <strong>No.</strong> El servicio es exclusivamente local dentro de Alto La Barranca, Aplao, Huancarqui, Querulpa, Corire y anexos cercanos del Valle de Majes.
+                </div>
+            </div>
+
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                <button onclick="toggleFaq(this)" class="w-full text-left p-4 text-sm font-semibold text-slate-900 flex justify-between items-center gap-4">
+                    <span>¿Qué vehículo realiza el servicio?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                </button>
+                <div class="hidden p-4 pt-0 text-xs text-slate-600 border-t border-slate-200/60 bg-white">
+                    El servicio se realiza en un <strong>Kia Picanto Rojo</strong> de tamaño compacto, mantenido en óptimas condiciones de limpieza y equipado con aire acondicionado.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div>
+                <span class="text-base font-extrabold text-white block">DANTE CHOQUE CASTRO</span>
+                <p class="text-xs text-slate-400">Taxi Local • Alto La Barranca - Valle de Majes • Tel: 993 246 533</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:993246533" class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border border-slate-700">
+                    <i class="fa-solid fa-phone text-brand-red"></i> 993 246 533
+                </a>
+                <a href="https://wa.me/51993246533" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800/80 mt-6 pt-4 text-center text-[11px] text-slate-500">
+            &copy; 2026 Dante Choque Castro - Servicio de Taxi Local en el Valle de Majes.
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/51993246533?text=Hola%20Dante,%20necesito%20un%20taxi%20en%20Alto%20La%20Barranca%20/%20Majes" target="_blank" 
+       class="fixed bottom-5 right-5 bg-green-500 text-white p-3.5 rounded-full flex items-center gap-2.5 shadow-2xl hover:bg-green-600 hover:scale-105 transition-all z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="text-xs font-bold pr-2 hidden sm:inline">Pedir Taxi Local</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function calculateEstimate() {
+            const origin = document.getElementById('origin-select').value;
+            const destination = document.getElementById('destination-select').value;
+            const serviceType = document.getElementById('service-type').value;
+            const customDiv = document.getElementById('custom-location-div');
+
+            if (origin === 'otro' || destination === 'otro') {
+                customDiv.classList.remove('hidden');
+            } else {
+                customDiv.classList.add('hidden');
+            }
+
+            const priceEl = document.getElementById('estimated-price');
+            const noteEl = document.getElementById('estimate-note');
+
+            if (serviceType === 'por_hora') {
+                priceEl.innerText = 'S/ 20.00 / hr';
+                noteEl.innerText = 'Tarifa fija por hora de servicio';
+                return;
+            }
+
+            if (serviceType === 'encomienda') {
+                priceEl.innerText = 'S/ 6.00';
+                noteEl.innerText = 'Tarifa fija por envío local de encargos';
+                return;
+            }
+
+            let fixedPrice = 'S/ 6.00';
+            let note = 'Tarifa fija (Pagos: Solo Yape o Efectivo)';
+
+            // Lógica de cálculo de tarifas fijas por zona
+            if ((origin.includes('Barranca') && destination.includes('Aplao')) || (origin.includes('Aplao') && destination.includes('Barranca'))) {
+                fixedPrice = 'S/ 6.00';
+                note = 'Tarifa fija Alto La Barranca - Aplao Centro';
+            } else if (origin === destination) {
+                fixedPrice = 'S/ 5.00';
+                note = 'Traslado interno dentro del mismo sector';
+            } else if (origin.includes('Huancarqui') || destination.includes('Huancarqui')) {
+                fixedPrice = 'S/ 8.00';
+                note = 'Tarifa fija hacia/desde Huancarqui';
+            } else if (origin.includes('Lucco') || destination.includes('Lucco')) {
+                fixedPrice = 'S/ 10.00';
+                note = 'Tarifa fija sector Lucco / Caspani / Cosos';
+            } else if (origin.includes('Querulpa') || destination.includes('Querulpa')) {
+                fixedPrice = 'S/ 12.00';
+                note = 'Tarifa fija hacia/desde Querulpa';
+            } else if (origin.includes('Corire') || destination.includes('Corire')) {
+                fixedPrice = 'S/ 22.00';
+                note = 'Tarifa fija en el valle hacia Corire';
+            }
+
+            priceEl.innerText = fixedPrice;
+            noteEl.innerText = note;
+        }
+
+        function sendWhatsAppBooking() {
+            const originSelect = document.getElementById('origin-select').value;
+            const destSelect = document.getElementById('destination-select').value;
+            const customLoc = document.getElementById('custom-location').value.trim();
+            const serviceType = document.getElementById('service-type').options[document.getElementById('service-type').selectedIndex].text;
+            const paymentMethod = document.getElementById('payment-method').value;
+            const estimatedPrice = document.getElementById('estimated-price').innerText;
+            const notes = document.getElementById('notes').value.trim();
+
+            let originText = originSelect === 'otro' && customLoc ? customLoc : originSelect;
+            let destText = destSelect === 'otro' && customLoc ? customLoc : destSelect;
+
+            const message = `🚕 *SOLICITUD DE TAXI LOCAL (VALLE DE MAJES)*%0A%0A` +
+                            `📍 *Origen:* ${encodeURIComponent(originText)}%0A` +
+                            `🏁 *Destino:* ${encodeURIComponent(destText)}%0A` +
+                            `📋 *Servicio:* ${encodeURIComponent(serviceType)}%0A` +
+                            `💰 *Tarifa Fija:* ${encodeURIComponent(estimatedPrice)}%0A` +
+                            `💳 *Forma de Pago:* ${encodeURIComponent(paymentMethod)}%0A` +
+                            (notes ? `📝 *Nota/Ref:* ${encodeURIComponent(notes)}%0A` : '') +
+                            `%0AHola Dante, solicito un servicio de taxi con tarifa fija en el Kia Picanto Rojo.`;
+
+            const phone = "51993246533";
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', calculateEstimate);
+    </script>
+</body>
+</html>
